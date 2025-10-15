@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portofolio Ariani Putri Andini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <h1>Ariani Putri Andini</h1>
+  <h2>Mahasiswi Sistem Informasi Angkatan 2024 - Universitas Ahmad Dahlan</h2>
+
+  <img src="foto arianii.jpg" alt="Foto profil Ariani Putri Andini" class="foto-profil">
+
+  <p>Hallo! Saya <b>Ariani Putri Andini</b>, seorang mahasiswi yang bersemangat mempelajari dunia teknologi dan desain.
+    Saya suka hal-hal kreatif seperti mendesain antarmuka (UI/UX), mengedit foto agar tampak menarik,
+    serta membuat tampilan web yang interaktif. Saya juga tertarik untuk terus belajar di bidang <b>web development</b>
+    karena dunia website sangat seru dan penuh kreativitas.
+  </p>
+
+  <p>
+    Saya juga aktif di kegiatan kampus, pernah menjadi bagian dari beberapa kepanitiaan dan organisasi Himpunan Mahasiswa Sistem Informasi di divisi Litbang sebagai Sekretaris Bendahara.
+  </p>
+
+  <h3>Hobi & Keahlian Saya:</h3>
+  <ul>
+    <li>Mendesain UI/UX</li>
+    <li>Melukis</li>
+    <li>Bermain bola voli</li>
+    <li>Fotografi dan editing</li>
+  </ul>
+
+  <p>
+    Kunjungi profil Instagram saya di
+    <a href="https://www.instagram.com/arnptriaa?igsh=OXF5MXZsMDZ4Z24%3D&utm_source=qr" target="_blank">
+      @arnptriaa
+    </a>
+  </p>
+
+  <p>Terima kasih telah berkunjung ke halaman portofolio saya!</p>
+
+  <script>
+    const starsContainer = document.querySelector('.stars');
+    for (let i = 0; i < 60; i++) { // jumlah bintang
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDelay = (Math.random() * 6) + 's';
+      starsContainer.appendChild(star);
+    }
+  </script>
+
+</body>
+</html>
