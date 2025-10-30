@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="dropdown">
+      <button class="dropdown-button">Change Background Color</button>
+      <div class="dropdown-content">
+        <div onclick="changeBackgroundColor('#ffffff')">White</div>
+        <div onclick="changeBackgroundColor('#add8e6')">Light Blue</div>
+        <div onclick="changeBackgroundColor('#90ee90')">Light Green</div>
+        <div onclick="changeBackgroundColor('#fffacd')">Light Yellow</div>
+        <div onclick="changeBackgroundColor('#ffb6b6')">Light Red</div>
+      </div>
+    </div>
+
+    <button onclick="adjustFontSize(2)">Increase Font Size</button>
+    <button onclick="adjustFontSize(-2)">Decrease Font Size</button>
+    <button id="themeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <div class="dropdown">
+      <button class="dropdown-button">Change Font Style</button>
+      <div class="dropdown-content">
+        <div onclick="changeFont('Poppins, sans-serif')">Poppins</div>
+        <div onclick="changeFont('Times New Roman, serif')">Times New Roman</div>
+        <div onclick="changeFont('sans-serif')">Sans-serif</div>
+        <div onclick="changeFont('serif')">Serif</div>
+        <div onclick="changeFont('monospace')">Monospace</div>
+        <div onclick="changeFont('cursive')">Cursive</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>My To-Do List</h2>
+    <div class="input-wrapper">
+      <input id="newTask" type="text" placeholder="Add a new task..." />
+      <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+
+    <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <p>Apakah kamu yakin ingin menghapus ini?</p>
+      <div class="modal-buttons">
+        <button id="confirmYes">Ya</button>
+        <button id="confirmNo">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
